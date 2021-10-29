@@ -3,12 +3,13 @@ import Image from "next/image";
 import moment from "moment";
 
 const FeaturedPost = ({ post }) => {
-  console.log(post);
   const { feature_image, title, excerpt } = post;
   return (
     <div className="post-card post-card-large">
-      <div className="post-card-large-image">
-        <img src={feature_image} alt={title} width={800} height={400} />
+      <div className="post-card-large-image cursor-pointer">
+        <Link href={`/post/${post.slug}`}>
+          <img src={feature_image} alt={title} width={800} height={400} />
+        </Link>
       </div>
       <div className="post-title-desc">
         <div style={{ width: "100%" }}>
@@ -34,19 +35,18 @@ const FeaturedPost = ({ post }) => {
                 post?.primary_author?.profile_image.replace("//", "http://")
               )}
               {post?.primary_author?.profile_image && (
-                <img
-                  className="author-pic"
-                  src={post?.primary_author?.profile_image}
-                  width="30"
-                />
+                <Link href={`/author/${post?.primary_author?.slug}`}>
+                  <img
+                    className="author-pic cursor-pointer"
+                    src={post?.primary_author?.profile_image}
+                    width="30"
+                  />
+                </Link>
               )}
             </div>
             <div className="float-right">
-              <span className="author-name">
-                <Link
-                  href={`/author/${post?.primary_author?.slug}`}
-                  className="cursor-pointer"
-                >
+              <span className="author-name cursor-pointer">
+                <Link href={`/author/${post?.primary_author?.slug}`}>
                   {post?.primary_author?.name}
                 </Link>
               </span>

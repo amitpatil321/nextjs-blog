@@ -3,6 +3,8 @@
   background-color: #ffffff;
   /* min-height: 50px; */
   border-radius: 0px 0px 10px 10px;
+  margin: auto;
+  width: 80%;
 }
 
 .logo {

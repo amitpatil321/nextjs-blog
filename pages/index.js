@@ -1,7 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
 
-import Navigation from "../components/Navigation";
 import FeaturedPost from "../components/FeaturedPost";
 import PostCard from "../components/PostCard";
 
@@ -13,11 +12,7 @@ const Homepage = ({ posts }) => {
 
   return (
     <div className="layout">
-      <Navigation />
       <div className="main-content">
-        <h1>Recent Posts</h1>
-        <hr />
-        <br />
         <FeaturedPost post={first} />
         <div className="post-feed">
           {rest.length ? (
@@ -30,6 +25,7 @@ const Homepage = ({ posts }) => {
             <span>Loading...</span>
           )}
         </div>
+        {/* <Footer /> */}
       </div>
     </div>
   );

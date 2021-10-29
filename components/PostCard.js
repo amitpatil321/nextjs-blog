@@ -43,19 +43,18 @@ const PostCard = ({ post }) => {
                 post?.primary_author?.profile_image.replace("//", "http://")
               )}
               {post?.primary_author?.profile_image && (
-                <img
-                  className="author-pic"
-                  src={post?.primary_author?.profile_image}
-                  width="30"
-                />
+                <Link href={`/author/${post?.primary_author?.slug}`}>
+                  <img
+                    className="author-pic cursor-pointer"
+                    src={post?.primary_author?.profile_image}
+                    width="30"
+                  />
+                </Link>
               )}
             </div>
             <div className="float-right">
-              <span className="author-name">
-                <Link
-                  href={`/author/${post?.primary_author?.slug}`}
-                  className="cursor-pointer"
-                >
+              <span className="author-name cursor-pointer">
+                <Link href={`/author/${post?.primary_author?.slug}`}>
                   {post?.primary_author?.name}
                 </Link>
               </span>
