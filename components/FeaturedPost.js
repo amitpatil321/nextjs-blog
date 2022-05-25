@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/link-passhref */
 import Link from "next/link";
 import Image from "next/image";
 import moment from "moment";
@@ -31,9 +34,6 @@ const FeaturedPost = ({ post }) => {
         {post?.primary_author && (
           <div className="author">
             <div className="float-left">
-              {console.log(
-                post?.primary_author?.profile_image.replace("//", "http://")
-              )}
               {post?.primary_author?.profile_image && (
                 <Link href={`/author/${post?.primary_author?.slug}`}>
                   <img

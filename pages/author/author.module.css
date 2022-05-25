@@ -1,0 +1,26 @@
+.author_header_content {
+  background-image: url("https://static.ghost.org/v4.0.0/images/publication-cover.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 300px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  color: #fff;
+}
+
+.author_header_content h2 {
+  font-size: 1.6rem;
+}
+
+.author_pic {
+  display: flex;
+  justify-content: center;
+}
+.author_pic img {
+  width: 100px;
+  border-radius: 50%;
+}

@@ -11,6 +11,7 @@ const PostCard = ({ post }) => {
         <Link href={`/post/${post.slug}`} className="cursor-pointer">
           <a>
             <Image
+              className="post-image"
               src={post.feature_image}
               width="400"
               height="250"
@@ -39,9 +40,6 @@ const PostCard = ({ post }) => {
         {post?.primary_author && (
           <div className="author">
             <div className="float-left">
-              {console.log(
-                post?.primary_author?.profile_image.replace("//", "http://")
-              )}
               {post?.primary_author?.profile_image && (
                 <Link href={`/author/${post?.primary_author?.slug}`}>
                   <img

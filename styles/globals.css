@@ -11,6 +11,14 @@
   font-family: "Merriweather", serif;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
+.site-color {
+  color: #ff1a75;
+}
+
 a {
   color: #ff1a75;
 }
@@ -115,6 +123,11 @@ h1 {
   margin: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
+  border: 1px solid #e6e6e6;
+}
+
+.post-card .post-image {
+  border-radius: 8px 8px 0px 0px;
 }
 
 .post-card:hover {
